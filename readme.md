@@ -2,6 +2,18 @@ ESP32-CAM Video Streaming Web Server
 
 A simple, lightweight video streaming web server for the AI-Thinker ESP32-CAM module. This project creates a standalone web page that streams MJPEG video directly from the ESP32.
 
+📸 Hardware Compatibility
+
+This code is specifically tested and verified for:
+
+Board: Generic ESP32-CAM (AI-Thinker Model)
+
+Camera Module: Rhynx M21-45 (OV2640 2MP)
+
+Note: This is the version often identified by the "Rhynx M21-45" text printed on the black camera ribbon cable.
+
+While designed for the Rhynx M21-45, this code should also work with standard OV2640 camera modules commonly found on AI-Thinker boards.
+
 Features
 
 Instant Streaming: MJPEG video stream accessible via web browser.
@@ -12,7 +24,7 @@ Simple Interface: Clean, dark-themed web UI.
 
 Hardware Required
 
-ESP32-CAM Board (AI-Thinker Model recommended)
+ESP32-CAM Board
 
 FTDI Programmer (USB-to-TTL) for uploading code
 
@@ -28,7 +40,8 @@ Setup & Installation
 
 Clone the Repository:
 
-git clone https://github.com/shashanksreddy/RHYX_M21-45-ESP32-Camera-Web-Server.git
+git clone [https://github.com/YOUR_USERNAME/ESP32-CAM-WebServer.git](https://github.com/YOUR_USERNAME/ESP32-CAM-WebServer.git)
+
 
 Open the Project:
 Open CameraWebServer.ino in the Arduino IDE.
@@ -40,7 +53,7 @@ const char *ssid = "YOUR_WIFI_NAME";
 const char *password = "YOUR_WIFI_PASSWORD";
 
 
-Board Settings:
+Board Settings (Arduino IDE):
 
 Board: AI Thinker ESP32-CAM
 
