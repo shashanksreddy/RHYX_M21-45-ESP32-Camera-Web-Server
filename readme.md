@@ -28,8 +28,7 @@ Setup & Installation
 
 Clone the Repository:
 
-git clone [https://github.com/YOUR_USERNAME/ESP32-CAM-WebServer.git](https://github.com/YOUR_USERNAME/ESP32-CAM-WebServer.git)
-
+git clone https://github.com/shashanksreddy/RHYX_M21-45-ESP32-Camera-Web-Server.git
 
 Open the Project:
 Open CameraWebServer.ino in the Arduino IDE.
