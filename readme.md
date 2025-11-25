@@ -1,10 +1,39 @@
-# ESP32-CAM Video Streaming Web Server
+# Rhynx M21-45 & Standard OV2640 ESP32-CAM Video Server
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-ESP32-orange.svg)
 ![Arduino](https://img.shields.io/badge/framework-Arduino-00979D.svg)
 
-A simple, lightweight video streaming web server for the **AI-Thinker ESP32-CAM** module. This project creates a standalone web page that streams MJPEG video directly from the ESP32 to your browser.
+A streamlined, lightweight video streaming server for **AI-Thinker ESP32-CAM** . Specifically verified for the Rhynx M21-45 (Black Ribbon) module, but also fully compatible with the standard OV2640 (Gold/Orange Ribbon) cameras.
+
+## 📖 Description
+
+This project provides a robust and simplified solution for streaming video from the ESP32-CAM. It is designed to solve the confusion between the two most common camera modules found in the wild:
+* The Rhynx M21-45: Identifiable by its black ribbon cable and often obscure driver requirements. Many standard examples fail to work correctly with this specific batch.
+* The Standard OV2640: Identifiable by its gold or orange ribbon cable. This is the classic module most tutorials expect.
+
+While the standard ESP32 Camera examples are powerful, they are often bloated with complex features like face recognition and use compressed, unreadable HTML files that are difficult for beginners to modify. This repository solves that by stripping away the unnecessary complexity to provide a pure, low-latency video streaming server that "just works" for both camera types.
+
+## ❓ Why You Should Use This Library
+
+If you have bought an ESP32-CAM recently, you might have received the "Black Strip" Rhynx version without realizing it requires specific consideration. This project is plug-and-play for your hardware, regardless of which camera version you received. Furthermore, if you want to customize the web interface (add buttons, change colors, or embed it in another site), this library makes it incredibly easy because the HTML is standard, readable code right inside the sketch.
+
+## Key Differences (Compared to Standard Library)
+
+### 1. Solves the Camera Model Confusion
+* **Standard Library:** Often defaults to settings that may not initialize the Rhynx M21-45 correctly.
+* **This Project:** Explicitly supports both major variants (Rhynx M21-45 & Standard OV2640).
+
+### 2. No More "Hex" HTML
+* **Standard Library:** The web page is stored as a massive, unreadable array of hexadecimal numbers (Gzipped) inside `camera_index.h`.
+* **This Project:** The website is stored as a **simple, plain text HTML string** inside `app_httpd.cpp`. You can edit it instantly.
+
+### 3. Removed "Bloatware"
+* **Standard Library:** Includes Face Detection/Recognition features that consume memory and lower frame rates.
+* **This Project:** Pure MJPEG streamer for faster compilation and better stability.
+
+### 4. Pre-Configured Pin Definitions
+* **This Project:** The `camera_pins.h` file is pre-configured specifically for the AI-Thinker layout used by these modules.
 
 ## 📸 Hardware Compatibility
 Specific Support:
