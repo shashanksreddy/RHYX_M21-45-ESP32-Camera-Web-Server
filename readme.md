@@ -59,9 +59,9 @@ While this project is designed for the Rhynx M21-45, it is also compatible with 
 bash
  git clone
 
-2.Open CameraWebServer.ino in the Arduino IDE. Edit the WiFi credentials section:
-const char *ssid = "YOUR_WIFI_NAME";
-const char *password = "YOUR_WIFI_PASSWORD";
+### 2.Open CameraWebServer.ino in the Arduino IDE. Edit the WiFi credentials section:
+* const char *ssid = "YOUR_WIFI_NAME";
+* const char *password = "YOUR_WIFI_PASSWORD";
 
 3. Board Settings (Arduino IDE)
 
